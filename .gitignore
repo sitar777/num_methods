@@ -1,0 +1,9 @@
+**/approximation/bin
+**/interpolation/bin
+**/matchMaker/bin
+**/matchMaker/res
+**/minimization/bin
+**/bisect/bin
+**/equationSystem/bin
+**/newton/bin
+**/.DS_Store
