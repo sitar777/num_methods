@@ -1,0 +1,2 @@
+To make matchMaker work properly you need to create a folder named "res".
+Your database should have the columns "l_name", "f_name", "rank". Place it into "res" folder.
