@@ -1,7 +1,7 @@
 **/approximation/bin
 **/interpolation/bin
 **/matchMaker/bin
-**/matchMaker/res
+**/matchMaker/res/matchMaker.db
 **/minimization/bin
 **/bisect/bin
 **/equationSystem/bin
