@@ -1,3 +1,4 @@
+#directories ignored by git
 **/approximation/bin
 **/interpolation/bin
 **/matchMaker/bin
