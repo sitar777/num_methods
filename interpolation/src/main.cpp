@@ -94,22 +94,27 @@ poly lagrange(std::vector<double> nodes, double f(double x)){
 } // interpolation by Lagrange polynom 
 void errorVal(poly Ln, double f(double x)){
     double maxError = __DBL_MIN__;
+    double minError = __DBL_MAX__;
     double delta = 0.001;
     double sumOfErr = 0;
     double leftbound = a;
     int counter = 0;
     while(leftbound <= b){
         double err = abs(f(leftbound) - Ln.val(leftbound));
-        sumOfErr += err;
+        sumOfErr += pow(err,2);
         if (err > maxError){
             maxError = err;
+        }
+        if (err < minError){
+            minError = err;
         }
         leftbound += delta;
         ++counter; 
     }
-    printf("Averaged error is: %lf\n",sumOfErr/counter);
+    printf("Averaged error is: %lf\n",sqrt(sumOfErr)/counter);
+    printf("Minimum error is: %lf\n",minError);
     printf("Maximum error is: %lf\n",maxError);
-} // Error values printing 
+} // Error values printing
 int main(){
     boundCheck();
     std::vector<double> nodes = nodesChoice(10,'m');

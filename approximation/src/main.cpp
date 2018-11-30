@@ -105,7 +105,7 @@ void errorVal(poly Ln, double f(double x)){
     int counter = 0;
     while(leftbound <= b){
         double err = abs(f(leftbound) - Ln.val(leftbound));
-        sumOfErr += err;
+        sumOfErr += pow(err,2);
         if (err > maxError){
             maxError = err;
         }
@@ -115,7 +115,7 @@ void errorVal(poly Ln, double f(double x)){
         leftbound += delta;
         ++counter; 
     }
-    printf("Averaged error is: %lf\n",sumOfErr/counter);
+    printf("Averaged error is: %lf\n",sqrt(sumOfErr)/counter);
     printf("Minimum error is: %lf\n",minError);
     printf("Maximum error is: %lf\n",maxError);
 } // Error values printing
